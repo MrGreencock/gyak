@@ -114,6 +114,29 @@ int main() {
 
     }
     out << maximum;
+
+    vector<labda> labdak;
+    labda ltemp;
+    for(int i = 0; i < 5; i++) {
+        cout << "Adja meg a szinet es meretet a labdanak" << endl;
+        cin >> labdak.szin >> labdak.meret;
+        labdak.push_back(ltmemp);
+
+    }
+    vector<labda> piros;
+    vector<labda>nempiros;
+    for(labda l : labdak) {
+        if(l.szin == "piros") {
+            piros.push_back(l);
+        }
+        else {
+            nempiros.push_back(l);
+        }
+    }
+    cout << "Piros labdak: ";
+    for(labda l: prios) {
+        cout << l.szin << " " << l.meret << endl;
+    }
     in.close();
     out.close();
 
