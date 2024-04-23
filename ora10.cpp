@@ -94,5 +94,29 @@ int main() {
     infile.close();
     outfile.close();
 
+
+    //Adott a lottószámokat tartalmazó doksi
+    ifstream in("lotto.txt");
+    int lotto[4][5];
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 5; j++) {
+            in >> lotto[i][j];
+        }
+    }
+    int maximum[5] = {lotto[0][0], lotto[1][0], lotto[2][0], lotto[3][0], lotto[4][0]};
+    ofstream out("maximux.txt");
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 4; j++) {
+            if(maximum[i] < tomb[j][i]) {
+                maximum[i] = tomb[j][i];
+            }
+        }
+
+    }
+    out << maximum;
+    in.close();
+    out.close();
+
+
     return 0;
 }
